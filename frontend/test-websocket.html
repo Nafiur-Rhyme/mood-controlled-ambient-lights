@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <div id="status">Connecting...</div>
+    <div id="messages"></div>
+    
+    <script>
+        const ws = new WebSocket('ws://localhost:8000/ws/emotions');
+        const status = document.getElementById('status');
+        const messages = document.getElementById('messages');
+        
+        ws.onopen = () => {
+            status.textContent = 'Connected!';
+            status.style.color = 'green';
+        };
+        
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            const msg = document.createElement('div');
+            msg.textContent = `Emotion: ${data.emotion}, Confidence: ${data.confidence}%, Time: ${data.timestamp}`;
+            messages.insertBefore(msg, messages.firstChild);
+            
+            // Keep only last 10 messages
+            while (messages.children.length > 10) {
+                messages.removeChild(messages.lastChild);
+            }
+        };
+        
+        ws.onerror = (error) => {
+            status.textContent = 'Error: ' + error;
+            status.style.color = 'red';
+            console.error('WebSocket error:', error);
+        };
+        
+        ws.onclose = () => {
+            status.textContent = 'Disconnected';
+            status.style.color = 'orange';
+        };
+    </script>
+</body>
+</html>

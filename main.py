@@ -56,6 +56,7 @@ def load_default_mappings():
         "neutral": LightState(color="#FFFFFF", brightness=50, transition_speed=1.5),
         "surprise": LightState(color="#FF69B4", brightness=90, transition_speed=0.3),
         "fear": LightState(color="#800080", brightness=40, transition_speed=0.8),
+        "disgust": LightState(color="#9ACD32", brightness=60, transition_speed=1.0),
     }
 
 # REST Endpoints
@@ -127,6 +128,19 @@ async def update_mappings(mappings: Dict[str, EmotionMapping]):
         )
     
     return {"status": "updated", "mappings": emotion_mappings}
+
+@app.post("/api/mappings/{emotion}")
+async def update_single_mapping(emotion: str, mapping: EmotionMapping):
+    """Update a single emotion-to-light mapping"""
+    global emotion_mappings
+    
+    emotion_mappings[emotion] = LightState(
+        color=mapping.color,
+        brightness=mapping.brightness,
+        transition_speed=mapping.transition_speed
+    )
+    
+    return {"status": "updated", "emotion": emotion, "mapping": mapping}
 
 @app.post("/api/control-light")
 async def control_light(light_state: LightState):
