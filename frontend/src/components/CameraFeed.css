@@ -1,19 +1,20 @@
 .camera-feed {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .camera-feed h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
+    max-height: 280px;
     background: #000;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -39,19 +40,19 @@
 }
 
 .camera-icon {
-    font-size: 4rem;
+    font-size: 2.5rem;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     opacity: 0.8;
 }
 
 .placeholder-content p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .placeholder-content small {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     opacity: 0.8;
 }

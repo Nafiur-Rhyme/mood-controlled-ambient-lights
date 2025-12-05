@@ -1,6 +1,6 @@
 .App {
     min-height: 100vh;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .container {
@@ -10,19 +10,19 @@
 
 .header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     color: #333;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
     font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     color: #666;
     font-weight: 300;
 }
@@ -30,28 +30,28 @@
 .main-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     align-items: start;
 }
 
 .left-panel,
 .right-panel {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 1.25rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
 
 .control-panel {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
 }
 
 .control-btn {
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
     font-weight: 600;
     border: none;
     border-radius: 50px;

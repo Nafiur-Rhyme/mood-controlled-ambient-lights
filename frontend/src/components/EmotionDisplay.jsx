@@ -8,7 +8,6 @@ const EMOTION_EMOJIS = {
     neutral: '😐',
     surprise: '😮',
     fear: '😨',
-    disgust: '🤢',
 };
 
 function EmotionDisplay({ emotion, confidence, isRunning }) {

@@ -51,12 +51,11 @@ def load_default_mappings():
     global emotion_mappings
     emotion_mappings = {
         "happy": LightState(color="#FFD700", brightness=100, transition_speed=1.0),
-        "sad": LightState(color="#4169E1", brightness=30, transition_speed=2.0),
+        "sad": LightState(color="#4169E1", brightness=50, transition_speed=2.0),
         "angry": LightState(color="#FF0000", brightness=80, transition_speed=0.5),
         "neutral": LightState(color="#FFFFFF", brightness=50, transition_speed=1.5),
         "surprise": LightState(color="#FF69B4", brightness=90, transition_speed=0.3),
-        "fear": LightState(color="#800080", brightness=40, transition_speed=0.8),
-        "disgust": LightState(color="#9ACD32", brightness=60, transition_speed=1.0),
+        "fear": LightState(color="#800080", brightness=70, transition_speed=0.8),
     }
 
 # REST Endpoints

@@ -8,7 +8,6 @@ const EMOTION_EMOJIS = {
     neutral: '😐',
     surprise: '😮',
     fear: '😨',
-    disgust: '🤢',
 }; function EmotionSettings({ mappings, onUpdateMapping, currentEmotion }) {
     const [expandedEmotion, setExpandedEmotion] = useState(null);
 

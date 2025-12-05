@@ -10,12 +10,11 @@ const API_BASE = 'http://localhost:8000';
 
 const DEFAULT_MAPPINGS = {
     happy: { color: '#FFD700', brightness: 100, transition_speed: 1.0 },
-    sad: { color: '#4169E1', brightness: 30, transition_speed: 2.0 },
+    sad: { color: '#4169E1', brightness: 50, transition_speed: 2.0 },
     angry: { color: '#FF0000', brightness: 80, transition_speed: 0.5 },
     neutral: { color: '#FFFFFF', brightness: 50, transition_speed: 1.5 },
     surprise: { color: '#FF69B4', brightness: 90, transition_speed: 0.3 },
-    fear: { color: '#800080', brightness: 40, transition_speed: 0.8 },
-    disgust: { color: '#9ACD32', brightness: 60, transition_speed: 1.0 },
+    fear: { color: '#800080', brightness: 70, transition_speed: 0.8 },
 };
 
 function App() {
@@ -214,8 +213,8 @@ function App() {
         <div className="App">
             <div className="container">
                 <header className="header">
-                    <h1>🎭 Emotion-Based Lighting</h1>
-                    <p className="subtitle">Your emotions, your ambiance</p>
+                    <h1>🎭 Mood Controlled Ambient Lighting</h1>
+                    <p className="subtitle">Your ambiance, your mood</p>
                     {isRunning && (
                         <div style={{
                             display: 'inline-block',

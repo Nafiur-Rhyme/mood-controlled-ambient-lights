@@ -26,8 +26,7 @@ function RealTimeDebug() {
                 angry: '#FF0000',
                 neutral: '#FFFFFF',
                 surprise: '#FF69B4',
-                fear: '#800080',
-                disgust: '#9ACD32'
+                fear: '#800080'
             };
 
             if (colors[data.emotion]) {
